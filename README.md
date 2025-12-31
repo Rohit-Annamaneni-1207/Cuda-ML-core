@@ -1,2 +1,2 @@
-# FastTree-GPU
-A From-Scratch GPU Decision Tree Engine
+# Cuda-ML-core
+A From-Scratch GPU accelerated ML algorithm engine
