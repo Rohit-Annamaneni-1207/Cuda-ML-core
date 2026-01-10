@@ -1,0 +1,42 @@
+# CMake build directories
+build/
+cmake-build-*/
+out/
+
+# CMake cache and generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+*.cmake
+
+# Keep CMakeLists.txt (source files should be tracked)
+!CMakeLists.txt
+
+# Compiled object files
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.lib
+*.dll
+*.exe
+
+# CUDA compiled files
+*.cubin
+*.fatbin
+*.ptx
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Test and debug executables
+test_linear_regression
+debug_test
