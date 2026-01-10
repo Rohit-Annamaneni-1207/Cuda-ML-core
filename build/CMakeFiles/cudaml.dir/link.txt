@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcudaml.a CMakeFiles/cudaml.dir/src/linear_regression.cu.o
+/usr/bin/ranlib libcudaml.a
