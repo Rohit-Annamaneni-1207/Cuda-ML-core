@@ -3,7 +3,7 @@
 #include <cstdio>
 
 #include "cudaml/models/linear_regression.hpp"
-#include "kernels/math_kernels.cuh"
+#include "kernels/linear_reg_kernels.cuh"
 
 
 //to define checking of silent cuda errors instead of writing code at every call
@@ -16,7 +16,7 @@ inline void cuda_check(cudaError_t err)
 
 
 namespace cudaml {
-    LinearRegression::LinearRegression(int input_features_num, int output_features_num, float lr): Din(input_features_num), Dout(output_features_num), lr(lr), d_w(nullptr){
+    LinearRegression::LinearRegression(int input_features_num, int output_features_num, float lr, int threads_per_block): Din(input_features_num), Dout(output_features_num), lr(lr), d_w(nullptr), threadsPerBlock(threads_per_block){
         //allocate device memory on GPU
         cuda_check(cudaMalloc(&d_w, Din*Dout*sizeof(float)));
         
