@@ -1,7 +1,10 @@
 # CMake build directories
 build/
+build*/
+scripts/
 cmake-build-*/
 out/
+out*/
 
 # CMake cache and generated files
 CMakeCache.txt
@@ -11,8 +14,14 @@ CTestTestfile.cmake
 Makefile
 *.cmake
 
-# Keep CMakeLists.txt (source files should be tracked)
-!CMakeLists.txt
+# Ignore CMakeLists files
+CMakeLists.txt
+**/CMakeLists.txt
+
+# Personal notes
+
+self_notes/
+
 
 # Compiled object files
 *.o

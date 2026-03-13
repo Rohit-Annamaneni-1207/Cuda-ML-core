@@ -1,9 +1,11 @@
 #include <iostream>
 #include <vector>
+#include <exception>
 #include <cuda_runtime.h>
 #include "cudaml/models/linear_regression.hpp"
 
 int main() {
+    try {
     const int N = 4;
     const int Din = 2;
     const int Dout = 1;
@@ -64,4 +66,8 @@ int main() {
     cudaFree(d_Y);
     
     return 0;
+    } catch (const std::exception& ex) {
+        std::cerr << "Runtime error: " << ex.what() << "\n";
+        return 1;
+    }
 }
